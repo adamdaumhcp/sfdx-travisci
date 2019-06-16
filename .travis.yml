@@ -21,5 +21,5 @@ before_install:
   --username $USERNAME --setdefaultdevhubusername -a travisci --instanceurl https://test.salesforce.com
 script:
 - sfdx force:org:display -u travisci
-- sfdx force:source:push -u travisci
+- sfdx force:source:deploy -u travisci
 - sfdx force:apex:test:run -u travisci --wait 10
