@@ -22,5 +22,4 @@ before_install:
 script:
 - sfdx force:org:display -u travisci
 - sfdx force:source:convert -d deploy/
-- sfdx force:mdapi:deploy -d deploy -u travisci
-- sfdx force:apex:test:run -u travisci --wait 10
+- sfdx force:mdapi:deploy -d deploy -u travisci --testlevel RunSpecifiedTests --runtests mytest
